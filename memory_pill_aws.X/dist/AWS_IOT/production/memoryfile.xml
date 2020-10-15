@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project>                                  
+  <executable name="dist/AWS_IOT/production/memory_pill_aws.X.production.elf">                 
+    <memory name="program">              
+      <units>bytes</units>                 
+      <length>49152</length>                 
+      <used>43935</used>                     
+      <free>5217</free>                     
+    </memory>                              
+    <memory name="data">                 
+      <units>bytes</units>                 
+      <length>6144</length>                 
+      <used>3169</used>                     
+      <free>2975</free>                     
+    </memory>                              
+  </executable>                            
+</project>                                 
