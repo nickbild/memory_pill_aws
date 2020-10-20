@@ -109,7 +109,7 @@ static void sendToCloud(void)
     }
     if (len >0) 
     {
-        CLOUD_publishData((uint8_t*)publishMqttTopic ,(uint8_t*)json, len);        
+//        CLOUD_publishData((uint8_t*)publishMqttTopic ,(uint8_t*)json, len);        
         if (holdCount)
         {
             holdCount--;
@@ -165,9 +165,10 @@ void application_init(void)
     // Initialization of modules before interrupts are enabled
     SYSTEM_Initialize();
     
-    // Handle PA2 interrupt on falling edge.
-    PA2_EnableInterruptForFallingEdge();
-    PORTA_PA2_SetInterruptHandler(sendBottleOpenToCloud);
+    PA2_SetDigitalInput();
+    
+//    SW0_EnableInterruptForRisingEdge();
+//    PORTF_SW0_SetInterruptHandler(sendBottleOpenToCloud);
     
     
     LED_test();
@@ -373,6 +374,10 @@ void loadDefaultAWSEndpoint(void)
 void runScheduler(void)
 {
     timeout_callNextCallback();
+    
+    if (PA2_GetValue()) {
+        sendBottleOpenToCloud();
+    }
 }
 
 // This gets called by the scheduler approximately every 100ms
@@ -467,17 +472,24 @@ static void  wifiConnectionStateChanged(uint8_t status)
 }
 
 static void sendBottleOpenToCloud() {
-    // Ensure that we have a valid cloud connection
+    static char json[PAYLOAD_SIZE];
+    static char publishMqttTopic[PUBLISH_TOPIC_SIZE];
+    int len = 0;    
+    memset((void*)publishMqttTopic, 0, sizeof(publishMqttTopic));
+    sprintf(publishMqttTopic, "%s/memoryPill", cid);
+    
     if (shared_networking_params.haveAPConnection)
     {
-    static char tutorialPayload[PAYLOAD_SIZE];
-    int tutorialLen = 0;
-    // Set MQTT topic
-    memset((void*)memoryPillSubscribeTopic, 0, sizeof(memoryPillSubscribeTopic));
-    sprintf(memoryPillSubscribeTopic, "memoryPill");
-    // Construct payload
-    tutorialLen = sprintf(tutorialPayload,"{\"thing_name\":\"%s\"}", cid);
-    // Publish data to cloud
-    CLOUD_publishData((uint8_t*)memoryPillSubscribeTopic ,(uint8_t*)tutorialPayload, tutorialLen);
+        time_t rawtime;
+        struct tm * timeinfo;
+
+        time ( &rawtime );
+        timeinfo = localtime ( &rawtime );
+        
+        len = sprintf(json,"{\"Time\":\"%s\"}", asctime (timeinfo));
+    }
+    if (len >0) 
+    {
+        CLOUD_publishData((uint8_t*)publishMqttTopic ,(uint8_t*)json, len);
     }
 }

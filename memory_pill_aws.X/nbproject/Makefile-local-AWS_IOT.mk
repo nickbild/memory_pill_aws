@@ -34,3 +34,4 @@ MP_AS_DIR="/Applications/microchip/xc8/v2.30/bin"
 MP_LD_DIR="/Applications/microchip/xc8/v2.30/bin"
 MP_AR_DIR="/Applications/microchip/xc8/v2.30/bin"
 # MP_BC_DIR is not defined
+DFP_DIR=/Users/nickbild/.mchp_packs/Microchip/ATmega_DFP/2.0.12

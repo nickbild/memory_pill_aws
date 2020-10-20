@@ -29,7 +29,7 @@ int main(void)
 
 	while (1)
 	{ 
-		runScheduler();  
+		runScheduler(); 
 	}
    
 	return 0;
