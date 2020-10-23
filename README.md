@@ -16,7 +16,7 @@ Memory Pill AWS is an update to my previous [Memory Pill](https://github.com/nic
 
 A small hole is drilled into the threaded portion of a medicine bottle.  A pushbutton is attached inside the bottle so that the button lines up with the hole.  A 3D printed [button extender](https://github.com/nickbild/memory_pill/tree/master/3d_models) is glued to the button such that the bottle top depresses the button.  Removing the bottle top will then release the button.
 
-The button is connected to a [Microchip AVR-IoT WA](https://www.microchip.com/Developmenttools/ProductDetails/EV15R70A).  When the button is released, the [AVR-IoT WA](https://github.com/nickbild/memory_pill_aws/tree/main/memory_pill_aws.X) sends an MQTT packet to AWS IoT Core.  The data is then stored in a table in AWS DynamoDB.  This database is used to populate a [web dashboard](https://github.com/nickbild/memory_pill_aws/tree/main/web_calendar) that displays a patient's medication administration record.
+The button is connected to a [Microchip AVR-IoT WA](https://www.microchip.com/Developmenttools/ProductDetails/EV15R70A).  When the button is released, the AVR-IoT WA [sends an MQTT packet](https://github.com/nickbild/memory_pill_aws/tree/main/memory_pill_aws.X) to AWS IoT Core.  The data is then stored in a table in AWS DynamoDB.  This database is used to [populate a web dashboard](https://github.com/nickbild/memory_pill_aws/tree/main/web_calendar) that displays a patient's medication administration record.
 
 ## Uses
 
