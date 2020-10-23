@@ -7,7 +7,7 @@ Memory Pill AWS is an update to my previous [Memory Pill](https://github.com/nic
 ## How It Works
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/memory_pill_overview.jpg">
+<img src="https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/memory_pill_aws_overview.jpg">
 </p>
 
 A small hole is drilled into the threaded portion of a medicine bottle.  A pushbutton is attached inside the bottle so that the button lines up with the hole.  A 3D printed [button extender](https://github.com/nickbild/memory_pill/tree/master/3d_models) is glued to the button such that the bottle top depresses the button.  Removing the bottle top will then release the button.
