@@ -24,8 +24,10 @@ It also has uses for the young and healthy who can sometimes forget if they took
 
 YouTube:  
 
+The device, with internal components removed:
 ![memory_pill](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/memory_pill_aws.jpg)
 
+Schematic:
 ![schematic](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/schematic.png)
 
 ## Bill of Materials
