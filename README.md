@@ -1,6 +1,6 @@
 # Memory Pill AWS
 
-Memory Pill AWS passively records the last time a medication bottle was opened to prevent over- and underdosing of medications when you cannot remember if you have already taken a scheduled dose.  Medication data is transmitted to Amazon Web Services, and is viewable in a web dashboard.
+Memory Pill AWS passively records the time when a medication bottle is opened to prevent over- and underdosing of medications when you cannot remember if you have already taken a scheduled dose.  Medication data is transmitted to Amazon Web Services, and is viewable in a web dashboard.
 
 Memory Pill AWS is an update to my previous [Memory Pill](https://github.com/nickbild/memory_pill) project.
 
