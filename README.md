@@ -24,6 +24,10 @@ It also has uses for the young and healthy who can sometimes forget if they took
 
 YouTube:  
 
+![memory_pill](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/memory_pill_aws.jpg)
+
+![schematic](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/schematic.png)
+
 ## Bill of Materials
 
 - 1 x Microchip AVR-IoT WA
