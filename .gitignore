@@ -1,3 +1,5 @@
 aws_secret.txt
 iotprovision/
+__pycache__
+manage_data.py
 
