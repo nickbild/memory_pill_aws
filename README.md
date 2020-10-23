@@ -23,6 +23,7 @@ It also has uses for the young and healthy who can sometimes forget if they took
 ## Media
 
 YouTube:  
+https://www.youtube.com/watch?v=G21fJ9ejwRg
 
 The device, with internal components removed:
 ![memory_pill](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/memory_pill_aws.jpg)
