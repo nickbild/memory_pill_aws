@@ -27,6 +27,9 @@ YouTube:
 The device, with internal components removed:
 ![memory_pill](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/memory_pill_aws.jpg)
 
+Web dashboard:
+![schematic](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/dashboard_sm.png)
+
 Schematic:
 ![schematic](https://raw.githubusercontent.com/nickbild/memory_pill_aws/main/media/schematic.png)
 
